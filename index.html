@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudyReps — Learn Smarter with Short-Form Video Reps</title>
+  <meta name="description" content="StudyReps turns studying into a TikTok-style experience. Watch expert video lessons, answer quiz locks, compete on leaderboards, and master any subject with AI-powered practice reps.">
+  <meta name="keywords" content="study app, educational videos, quiz app, spaced repetition, learning, AI tutor, leaderboard, study groups">
+  <meta property="og:title" content="StudyReps — Learn Smarter with Short-Form Video Reps">
+  <meta property="og:description" content="Short-form video lessons + quiz locks + AI coaching. The study app that makes learning addictive.">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+</head>
+<body>
+
+  <!-- ═══ Announcement Bar ═══ -->
+  <div class="announcement-bar">
+    🎓 StudyReps is now available on Web — <a href="#cta">Try it free →</a>
+  </div>
+
+  <!-- ═══ Navigation ═══ -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#" class="nav-logo">
+        <div class="nav-logo-icon">📚</div>
+        StudyReps
+      </a>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#faq">FAQ</a>
+        <a href="#cta" class="nav-cta">Start Free →</a>
+      </div>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">☰</button>
+    </div>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#features" onclick="closeMobileMenu()">Features</a>
+      <a href="#how-it-works" onclick="closeMobileMenu()">How It Works</a>
+      <a href="#testimonials" onclick="closeMobileMenu()">Reviews</a>
+      <a href="#faq" onclick="closeMobileMenu()">FAQ</a>
+      <a href="#cta" class="btn-primary" onclick="closeMobileMenu()" style="text-align:center;justify-content:center">Start Free →</a>
+    </div>
+  </nav>
+
+  <!-- ═══ Hero Section ═══ -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge fade-in">🔥 Education just got addictive</div>
+        <h1 class="fade-in fade-in-delay-1">
+          Study smarter<br>with <span>video reps</span>
+        </h1>
+        <p class="hero-subtitle fade-in fade-in-delay-2">
+          Short-form video lessons from expert educators with quiz locks that force active recall. Compete on leaderboards and track your streak.
+        </p>
+        <div class="hero-actions fade-in fade-in-delay-3">
+          <a href="#cta" class="btn-primary">Get started for free →</a>
+          <a href="#how-it-works" class="btn-secondary">See how it works</a>
+        </div>
+        <div class="hero-social-proof fade-in fade-in-delay-4">
+          <div class="avatar-stack">
+            <div class="avatar">👩‍🎓</div>
+            <div class="avatar">👨‍💻</div>
+            <div class="avatar">👩‍🔬</div>
+            <div class="avatar">🧑‍🎓</div>
+            <div class="avatar">👨‍🎓</div>
+          </div>
+          <p><strong>2,400+</strong> students already studying</p>
+        </div>
+      </div>
+      <div class="hero-visual fade-in fade-in-delay-2">
+        <img src="images/hero-phones.png" alt="StudyReps app showing video feed and discover screen" class="hero-mockup">
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Logos Bar ═══ -->
+  <section class="logos-bar">
+    <div class="container">
+      <p>Used by students at</p>
+      <div class="logos-grid">
+        <span class="logo-item">MIT</span>
+        <span class="logo-item">Stanford</span>
+        <span class="logo-item">Harvard</span>
+        <span class="logo-item">Oxford</span>
+        <span class="logo-item">Tribhuvan U</span>
+        <span class="logo-item">IIT Delhi</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Problem Section ═══ -->
+  <section class="problem-section">
+    <div class="container">
+      <div class="section-label fade-in">💡 Sound familiar?</div>
+      <h2 class="fade-in">The problem isn't motivation.<br>It's <span>how you study.</span></h2>
+      <div class="problem-statements">
+        <div class="problem-statement fade-in fade-in-delay-1">You re-read notes but forget everything by exam day</div>
+        <div class="problem-statement fade-in fade-in-delay-2">You watch long lectures but zone out halfway through</div>
+        <div class="problem-statement fade-in fade-in-delay-3">You highlight textbooks but can't recall what you highlighted</div>
+        <div class="problem-statement fade-in fade-in-delay-4">You know you're smart — but your grades don't show it</div>
+        <div class="problem-statement highlight fade-in fade-in-delay-5">That's what StudyReps fixes.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ How It Works ═══ -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <h2 class="fade-in">How StudyReps transforms<br><span>your learning:</span></h2>
+      <div class="steps-grid">
+        <div class="steps-list">
+          <div class="step-item fade-in">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3>Swipe through video reps</h3>
+              <p>Short, expert-created video lessons on every subject. Each one teaches a single concept — no fluff.</p>
+            </div>
+          </div>
+          <div class="step-item fade-in fade-in-delay-1">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3>Answer the quiz lock</h3>
+              <p>Every video has a built-in quiz question. You can't scroll past until you answer — forcing active recall.</p>
+            </div>
+          </div>
+          <div class="step-item fade-in fade-in-delay-2">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3>Get AI-powered feedback</h3>
+              <p>Stuck? Our AI tutor explains the concept, walks you through the answer, and creates targeted drills.</p>
+            </div>
+          </div>
+          <div class="step-item fade-in fade-in-delay-3">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h3>Track your streak & climb</h3>
+              <p>Earn XP, maintain your streak, and compete on the leaderboard. Learning becomes a game you want to win.</p>
+            </div>
+          </div>
+          <div class="step-item fade-in fade-in-delay-4">
+            <div class="step-number">5</div>
+            <div class="step-content">
+              <h3>Watch your grades improve</h3>
+              <p>See your mastery scores rise across subjects. StudyReps uses spaced repetition science to lock in knowledge.</p>
+            </div>
+          </div>
+        </div>
+        <div class="steps-visual fade-in">
+          <img src="images/mockup-feed.png" alt="StudyReps video feed with quiz lock">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Features Grid ═══ -->
+  <section class="features-section" id="features">
+    <div class="container">
+      <div class="section-label fade-in">⚡ Packed with features</div>
+      <h2 class="fade-in">Everything you need to<br><span>master any subject</span></h2>
+      <p class="features-subtitle fade-in">From bite-sized video lessons to AI coaching — StudyReps gives you a complete learning system in your pocket.</p>
+
+      <div class="features-grid">
+        <div class="feature-card fade-in">
+          <div class="feature-icon">📹</div>
+          <h3>Short-Form Video Reps</h3>
+          <p>TikTok-style video lessons from expert educators. Each rep teaches one concept in under 60 seconds.</p>
+        </div>
+        <div class="feature-card fade-in fade-in-delay-1">
+          <div class="feature-icon">🔒</div>
+          <h3>Quiz Lock System</h3>
+          <p>Can't scroll until you answer the question. Forces active recall – the #1 proven study technique.</p>
+        </div>
+        <div class="feature-card fade-in fade-in-delay-2">
+          <div class="feature-icon">🤖</div>
+          <h3>AI Drill Coach</h3>
+          <p>Stuck on a concept? Chat with our AI tutor who explains, quizzes, and creates personalized drills.</p>
+        </div>
+        <div class="feature-card fade-in fade-in-delay-3">
+          <div class="feature-icon">🏆</div>
+          <h3>Leaderboard & XP</h3>
+          <p>Earn XP for every rep completed. Compete with friends and climb the global leaderboard rankings.</p>
+        </div>
+        <div class="feature-card fade-in fade-in-delay-4">
+          <div class="feature-icon">🔥</div>
+          <h3>Streak Tracking</h3>
+          <p>Build a daily study streak. Visual progress tracking keeps you motivated and accountable.</p>
+        </div>
+        <div class="feature-card fade-in fade-in-delay-5">
+          <div class="feature-icon">👥</div>
+          <h3>Study Squads</h3>
+          <p>Join or create study groups. Challenge your squad, share reps, and study together — even remotely.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Dual Feature: Video + AI ═══ -->
+  <section class="dual-feature">
+    <div class="container">
+      <h2 class="fade-in">Expert videos or <span>AI coaching?</span><br>We give you both.</h2>
+      <div class="dual-grid">
+        <div class="dual-card fade-in">
+          <span class="card-icon">🎬</span>
+          <h3>Learn from real educators</h3>
+          <ul>
+            <li><span class="check">✓</span> Subject experts who make complex topics simple</li>
+            <li><span class="check">✓</span> Bite-sized videos designed for maximum retention</li>
+            <li><span class="check">✓</span> New content added every week across all subjects</li>
+          </ul>
+        </div>
+        <div class="dual-card dark fade-in fade-in-delay-1">
+          <span class="card-icon">🧠</span>
+          <h3>Get coached by AI</h3>
+          <ul>
+            <li><span class="check">✓</span> Instant explanations when you get a question wrong</li>
+            <li><span class="check">✓</span> Personalized drill sessions targeting your weak spots</li>
+            <li><span class="check">✓</span> Chat-based tutoring on any topic, any time</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ App Showcase Carousel ═══ -->
+  <section class="app-showcase">
+    <div class="container">
+      <h2 class="fade-in">See <span>StudyReps</span> in action</h2>
+      <p class="features-subtitle fade-in">Swipe through the screens that make learning feel effortless.</p>
+    </div>
+    <div class="showcase-track" id="showcaseTrack">
+      <!-- Set 1 -->
+      <div class="showcase-card"><img src="images/mockup-feed.png" alt="Video Feed"></div>
+      <div class="showcase-card"><img src="images/mockup-discover.png" alt="Discover"></div>
+      <div class="showcase-card"><img src="images/mockup-leaderboard.png" alt="Leaderboard"></div>
+      <div class="showcase-card"><img src="images/mockup-streak.png" alt="Streak"></div>
+      <div class="showcase-card"><img src="images/mockup-drill.png" alt="AI Drill Coach"></div>
+      <div class="showcase-card"><img src="images/mockup-profile.png" alt="Profile"></div>
+      <!-- Set 2 (duplicate for infinite scroll) -->
+      <div class="showcase-card"><img src="images/mockup-feed.png" alt="Video Feed"></div>
+      <div class="showcase-card"><img src="images/mockup-discover.png" alt="Discover"></div>
+      <div class="showcase-card"><img src="images/mockup-leaderboard.png" alt="Leaderboard"></div>
+      <div class="showcase-card"><img src="images/mockup-streak.png" alt="Streak"></div>
+      <div class="showcase-card"><img src="images/mockup-drill.png" alt="AI Drill Coach"></div>
+      <div class="showcase-card"><img src="images/mockup-profile.png" alt="Profile"></div>
+    </div>
+  </section>
+
+  <!-- ═══ Testimonials ═══ -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <h2 class="fade-in">Students are <span>loving it.</span></h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card fade-in">
+          <div class="testimonial-stars">★★★★★</div>
+          <h4>Game changer for exam prep</h4>
+          <p>I used to spend hours re-reading notes and forgetting everything. StudyReps forced me to actually recall the material. My test scores went up 20% in two weeks.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">👩‍🎓</div>
+            <span>Sarah K. — Pre-Med Student</span>
+          </div>
+        </div>
+        <div class="testimonial-card fade-in fade-in-delay-1">
+          <div class="testimonial-stars">★★★★★</div>
+          <h4>Better than any tutor</h4>
+          <p>The AI drill coach caught gaps in my understanding that I didn't even know I had. It's like having a personal tutor available 24/7 who never gets tired of explaining.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">👨‍💻</div>
+            <span>Raj P. — CS Undergrad</span>
+          </div>
+        </div>
+        <div class="testimonial-card fade-in fade-in-delay-2">
+          <div class="testimonial-stars">★★★★★</div>
+          <h4>Addictive in a good way</h4>
+          <p>I actually look forward to studying now. The streak system and leaderboard make it feel like a game. My squad and I compete daily — it's made us all better students.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">🧑‍🎓</div>
+            <span>Maya L. — High School Senior</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FAQ ═══ -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <h2 class="fade-in">Frequently asked questions</h2>
+      <div class="faq-list">
+        <div class="faq-item fade-in">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What is StudyReps?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>StudyReps is a study app that uses short-form video lessons with built-in quiz locks to force active recall — the most effective learning technique backed by cognitive science. Think TikTok meets flashcards, powered by AI.</p>
+          </div>
+        </div>
+        <div class="faq-item fade-in fade-in-delay-1">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Who is StudyReps for?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>StudyReps is for any student who wants to study more effectively — from high schoolers preparing for exams to university students mastering complex subjects. It's especially useful if you struggle with passive studying (re-reading, highlighting) and want a more engaging, proven approach.</p>
+          </div>
+        </div>
+        <div class="faq-item fade-in fade-in-delay-2">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            What subjects are available?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>We cover Math, Physics, Chemistry, Biology, Computer Science, History, English, and more. New subjects and video reps are added every week by expert educators. You can also create your own custom reps.</p>
+          </div>
+        </div>
+        <div class="faq-item fade-in fade-in-delay-3">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            How does the quiz lock work?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Each video rep has a question that appears at a specific timestamp. You must answer the question correctly (or attempt it) before you can move to the next video. This forces active recall — the #1 scientifically proven study technique — instead of passive watching.</p>
+          </div>
+        </div>
+        <div class="faq-item fade-in fade-in-delay-4">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Is StudyReps free?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes! StudyReps has a free tier that gives you full access to the video feed, quiz locks, streak tracking, and leaderboards. Premium features like AI Drill Coach and custom reps are available with a subscription.</p>
+          </div>
+        </div>
+        <div class="faq-item fade-in fade-in-delay-5">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            How is this different from YouTube or TikTok?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>YouTube and TikTok are passive — you watch and forget. StudyReps is active. Every video has a built-in quiz that forces you to recall what you just learned. Plus, our AI coach adapts to your weaknesses, and the gamification (streaks, XP, leaderboards) keeps you studying consistently.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA Section ═══ -->
+  <section class="cta-section" id="cta">
+    <div class="container">
+      <div class="cta-card fade-in">
+        <h2>Ready to study smarter?</h2>
+        <p>Join thousands of students who are acing their exams with StudyReps.</p>
+        <a href="#" class="btn-primary">Get started for free →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Footer ═══ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo">
+            <div class="nav-logo-icon">📚</div>
+            StudyReps
+          </a>
+          <p>The study app that makes learning addictive. Short-form video reps, quiz locks, AI coaching, and leaderboards.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#">Web App</a></li>
+            <li><a href="#">Pricing</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Social</h4>
+          <ul>
+            <li><a href="#">Twitter / X</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">TikTok</a></li>
+            <li><a href="#">YouTube</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 StudyReps. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Terms of Use</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
