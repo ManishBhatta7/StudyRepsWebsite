@@ -137,3 +137,46 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.opacity = '1';
   }, 100);
 });
+
+// ── PWA Support ──
+let deferredPrompt;
+const installBtn = document.getElementById('installBtn');
+const installBtnMobile = document.getElementById('installBtnMobile');
+
+// Register Service Worker
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js')
+      .then(reg => console.log('Service Worker registered', reg))
+      .catch(err => console.error('Service Worker registration failed', err));
+  });
+}
+
+// Handle Install Prompt
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  if (installBtn) installBtn.style.display = 'inline-flex';
+  if (installBtnMobile) installBtnMobile.style.display = 'block';
+});
+
+const handleInstall = async () => {
+  if (deferredPrompt) {
+    deferredPrompt.prompt();
+    const { outcome } = await deferredPrompt.userChoice;
+    console.log(`User responded to the install prompt: ${outcome}`);
+    deferredPrompt = null;
+    if (installBtn) installBtn.style.display = 'none';
+    if (installBtnMobile) installBtnMobile.style.display = 'none';
+  }
+};
+
+if (installBtn) installBtn.addEventListener('click', handleInstall);
+if (installBtnMobile) installBtnMobile.addEventListener('click', handleInstall);
+
+// Hide install button when app is installed
+window.addEventListener('appinstalled', (evt) => {
+  console.log('StudyReps was installed.');
+  if (installBtn) installBtn.style.display = 'none';
+  if (installBtnMobile) installBtnMobile.style.display = 'none';
+});

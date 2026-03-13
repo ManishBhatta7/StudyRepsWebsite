@@ -53,6 +53,8 @@ img{max-width:100%;height:auto;display:block}
 .nav-links a:hover{color:var(--text-dark)}
 .nav-cta{background:var(--text-dark)!important;color:#fff!important;padding:10px 24px!important;border-radius:100px!important;font-weight:600!important;transition:all .3s!important}
 .nav-cta:hover{background:var(--orange)!important;transform:translateY(-1px);box-shadow:0 4px 16px var(--orange-glow)}
+.nav-install-btn{background:transparent;color:var(--orange);border:1px solid var(--orange);padding:10px 20px;border-radius:100px;font-weight:600;font-size:14px;cursor:pointer;transition:all .3s}
+.nav-install-btn:hover{background:var(--orange-glow);transform:translateY(-1px)}
 .mobile-menu-btn{display:none;background:none;border:none;font-size:28px;color:var(--text-dark);cursor:pointer;padding:4px}
 .mobile-nav{display:none;position:fixed;top:var(--nav-h);left:0;right:0;background:var(--cream);border-bottom:1px solid var(--border);padding:16px 24px;z-index:99;flex-direction:column;gap:16px;box-shadow:0 8px 24px rgba(0,0,0,.06)}
 .mobile-nav.open{display:flex}
